@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoMataMorre", "JogoMataMorre\JogoMataMorre.csproj", "{88837BF7-7F56-4636-8A3E-E219CCB3664A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoMataMorreTest", "JogoMataMorreTest\JogoMataMorreTest.csproj", "{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{88837BF7-7F56-4636-8A3E-E219CCB3664A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88837BF7-7F56-4636-8A3E-E219CCB3664A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88837BF7-7F56-4636-8A3E-E219CCB3664A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
