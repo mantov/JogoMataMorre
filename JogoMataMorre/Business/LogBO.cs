@@ -9,8 +9,9 @@ namespace JogoMataMorre.Business
 {
     public class LogBO
     {
-        public string LoadLog(string path =  @"Log\log.log")
+        public string LoadLog(string path = @"C:\Users\Slave\Source\Repos\JogoMataMorre\JogoMataMorre\Log\Log.Log")
         {
+
             string result = string.Empty;
 
             using (var reader =new StreamReader(path))

@@ -4,6 +4,7 @@ using JogoMataMorre.Entities;
 using JogoMataMorre.Business;
 
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 
 namespace JogoMataMorreTest
 {
@@ -24,15 +25,20 @@ namespace JogoMataMorreTest
             var logBO = new LogBO();
         }
 
-        [Test]
-        public void FilesExists()
-        {
+        //private void LoadNoFile()
+        //{
+        //    string log = _log.LoadLog("blabla");
 
-            string log = _log.LoadLog("blabla");
+        //}
 
-            Assert.Throws<FileNotFoundException>(
-                () => throw new FileNotFoundException());
-        }
+        //[Test]
+        //public void FilesNoExists()
+        //{
+
+        //    string log = _log.LoadLog("blabla");
+
+        //    Assert.Throws<FileNotFoundException>(LoadNoFile(),throw new FileNotFoundException());{
+        //}
 
         [Test]
         public void LoadLogRuns()
@@ -42,5 +48,13 @@ namespace JogoMataMorreTest
             Assert.IsNotEmpty(log);
         }
 
+        [Test]
+        public void HaveData()
+        {
+            string log = _log.LoadLog();
+            var points = log.Split('-');
+
+            Assert.GreaterOrEqual(points.Length,2);
+        }
     }
 }
