@@ -14,18 +14,18 @@ namespace JogoMataMorreTest
     {
         #region Private Structure
 
-        private LogBO _log;
+        private LogBO _logBO;
         private string _logFileContent;
         private string[] _logLines;
 
         private void LogBOFactory()
         {
-            _log = new LogBO();
+            _logBO = new LogBO();
         }
 
         private void LoadPrivateLog()
         {
-            _logFileContent = _log.LoadLog();
+            _logFileContent = _logBO.LoadLog();
         }
 
         private void SplitLog()
@@ -40,6 +40,20 @@ namespace JogoMataMorreTest
             LogBOFactory();
             LoadPrivateLog();
             SplitLog();
+        }
+
+        [Test]
+        public void TakeNumber()
+        {
+            string number = "123";
+            var line = new string[2];
+
+            line[0] = string.Empty;
+            line[1] = string.Format(" New match {0} has started 23/04/2013 15:36:04 ", number);
+
+            var result = _logBO.GetNumber(line);
+
+            Assert.That(number.Trim(), Is.EqualTo(result.Trim()));
         }
         
         [Test]

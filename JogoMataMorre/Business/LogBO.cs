@@ -23,25 +23,18 @@ namespace JogoMataMorre.Business
             match.Start = Convert.ToDateTime(logLines[0]);
             match.Number = GetNumber(logLines);
 
-
-
             return new Match();
 
 
         }
 
-        private string GetNumber(string[] logLines)
+        public string GetNumber(string[] logLines)
         {
-            string begin = "New match";
-            string end = "has started";
-            var start = logLines[1].IndexOf(begin) + begin.Length;
-            var final = logLines[1].IndexOf(end);
+            string newMatch = "New match";
+            string hasStarted = "has started";
+            var start = logLines[1].IndexOf(newMatch, StringComparison.Ordinal) + newMatch.Length;
+            var final = logLines[1].IndexOf(hasStarted, StringComparison.Ordinal);
 
-
-            for (int contador = 2; contador < logLines.Length -1; contador++)
-            {
-                
-            }
             return logLines[1].Substring(start, final - start).Trim();
         }
 
