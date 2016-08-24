@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using JogoMataMorre.Entities;
 using JogoMataMorre.Business;
 
@@ -11,50 +12,64 @@ namespace JogoMataMorreTest
     [TestFixture]
     public class LogBOTest
     {
-        private LogBO _log;
+        #region Private Structure
 
-        [SetUp]
-        public void Initial()
+        private LogBO _log;
+        private string _logFileContent;
+        private string[] _logLines;
+
+        private void LogBOFactory()
         {
             _log = new LogBO();
         }
 
+        private void LoadPrivateLog()
+        {
+            _logFileContent = _log.LoadLog();
+        }
+
+        private void SplitLog()
+        {
+            _logLines = _logFileContent.Split('-');
+        } 
+        #endregion
+
+        [SetUp]
+        public void Initial()
+        {
+            LogBOFactory();
+            LoadPrivateLog();
+            SplitLog();
+        }
+        
         [Test]
         public void LogBOExists()
         {
             var logBO = new LogBO();
         }
 
-        //private void LoadNoFile()
-        //{
-        //    string log = _log.LoadLog("blabla");
-
-        //}
-
-        //[Test]
-        //public void FilesNoExists()
-        //{
-
-        //    string log = _log.LoadLog("blabla");
-
-        //    Assert.Throws<FileNotFoundException>(LoadNoFile(),throw new FileNotFoundException());{
-        //}
-
         [Test]
         public void LoadLogRuns()
         {
-            string log = _log.LoadLog();
-
-            Assert.IsNotEmpty(log);
+            Assert.IsNotEmpty(_logFileContent);
         }
 
         [Test]
         public void HaveData()
         {
-            string log = _log.LoadLog();
-            var points = log.Split('-');
-
-            Assert.GreaterOrEqual(points.Length,2);
+            Assert.GreaterOrEqual(_logLines.Length,2);
         }
+
+        [Test]
+        public void FirstLineIsDate()
+        {
+            DateTime firstDate;
+            var logLines = _logLines;
+            bool isDAte = DateTime.TryParse(logLines[0], out firstDate);
+
+            Assert.IsTrue(isDAte);
+        }
+
+
     }
 }
