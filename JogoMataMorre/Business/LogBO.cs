@@ -11,11 +11,11 @@ namespace JogoMataMorre.Business
     public class LogBO
     {
 
-    //[0]: "23/04/2013 15:34:22 "
-    //[1]: " New match 11348965 has started 23/04/2013 15:36:04 "
-    //[2]: " Roman killed Nick using M16 23/04/2013 15:36:33 "
-    //[3]: " killed Nick by DROWN 23/04/2013 15:39:22 "
-    //[4]: " Match 11
+        //[0]: "23/04/2013 15:34:22 "
+        //[1]: " New match 11348965 has started 23/04/2013 15:36:04 "
+        //[2]: " Roman killed Nick using M16 23/04/2013 15:36:33 "
+        //[3]: " killed Nick by DROWN 23/04/2013 15:39:22 "
+        //[4]: " Match 11
 
         public Match LoadMatch(string[] logLines)
         {
@@ -48,15 +48,16 @@ namespace JogoMataMorre.Business
         }
 
 
-        public string LoadLog(string path = @"C:\Users\Slave\Source\Repos\JogoMataMorre\JogoMataMorre\Log\Log.Log")
+        //public string LoadLog(string path = @"C:\Users\Slave\Source\Repos\JogoMataMorre\JogoMataMorre\Log\Log.Log")
+        public string LoadLog(string path = @"c:\Temp\Log.Log")
         {
             string result = string.Empty;
 
-            using (var reader =new StreamReader(path))
+            using (var reader = new StreamReader(path))
             {
                 result = reader.ReadToEnd();
             }
-            
+
             return result;
         }
 

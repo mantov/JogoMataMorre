@@ -43,9 +43,10 @@ namespace JogoMataMorreTest
         }
 
         [Test]
+        [Repeat(1000)]
         public void TakeNumber()
         {
-            string number = "123";
+            string number = new Random().Next(0, int.MaxValue).ToString();
             var line = new string[2];
 
             line[0] = string.Empty;
