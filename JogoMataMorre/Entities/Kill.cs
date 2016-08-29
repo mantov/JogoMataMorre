@@ -13,9 +13,9 @@ namespace JogoMataMorre.Entities
 
         public DateTime Time { get; set; }
 
-        public Player Player { get; set; }
+        public string Gun { get; set; }
 
-        public Gun Gun { get; set; }
+        public Player Victim { get; set; }
 
     }
 }

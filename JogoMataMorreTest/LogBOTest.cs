@@ -42,7 +42,7 @@ namespace JogoMataMorreTest
             SplitLog();
         }
 
-        [Test]
+       [Test]
         [Repeat(1000)]
         public void TakeNumber()
         {
@@ -56,7 +56,23 @@ namespace JogoMataMorreTest
 
             Assert.That(number.Trim(), Is.EqualTo(result.Trim()));
         }
-        
+
+        [Test]
+        public void TakeDate()
+        {
+            var line = new string[3];
+
+            line[0] = string.Empty;
+            line[1] = " Roman killed Nick using M16 23/04/2013 15:36:33 ";
+            line[2] = string.Empty;
+
+            DateTime dateExpected = Convert.ToDateTime("23/04/2013 15:36:33");
+
+            DateTime result = _logBO.GetEnd(line, new Match());
+
+            Assert.That(dateExpected, Is.EqualTo(result));
+        }
+
         [Test]
         public void LogBOExists()
         {

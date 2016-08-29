@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\LogBO.cs" />
-    <Compile Include="Entities\Gun.cs" />
     <Compile Include="Entities\Kill.cs" />
     <Compile Include="Entities\Match.cs" />
     <Compile Include="Entities\Player.cs" />

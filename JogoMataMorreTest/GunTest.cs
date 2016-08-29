@@ -10,7 +10,7 @@ namespace JogoMataMorre.Test
         [Test]
         public void GunExists()
         {
-            var gun= new Gun();
+            //var gun= new Gun();
         }
     }
 }
