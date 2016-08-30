@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JogoMataMorre.Entities
+namespace JogoMataMorre.Business.Entities
 {
-    public class Player
+    public class PlayerMatch: Player
     {
-        public Player()
+        public PlayerMatch()
         {
             Kills = new List<Kill>();
             Deads = new List<DateTime>();
+            Awards = new List<string>();
         }
-        public int Id { get; set; }
-
-        public string Nome { get; set; }
-
+ 
         public List<Kill> Kills { get; set; }
 
         public List<DateTime> Deads { get; set; }
+
+        public List<string> Awards { get; set; } 
 
     }
 }

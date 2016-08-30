@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoMataMorre", "JogoMataMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoMataMorre.Test", "JogoMataMorreTest\JogoMataMorre.Test.csproj", "{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoMataMorre.Business", "JogoMataMorre.Business\JogoMataMorre.Business.csproj", "{446560A4-A98B-44AE-A386-37258D48EE98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4923A90B-D3AD-4BA0-8BE3-1989C22801AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446560A4-A98B-44AE-A386-37258D48EE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446560A4-A98B-44AE-A386-37258D48EE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446560A4-A98B-44AE-A386-37258D48EE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446560A4-A98B-44AE-A386-37258D48EE98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

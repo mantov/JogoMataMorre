@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JogoMataMorre.Entities
+namespace JogoMataMorre.Business.Entities
 {
     public class Match
     {
@@ -16,7 +16,7 @@ namespace JogoMataMorre.Entities
 
         public DateTime End { get; set; }
 
-        public List<Player> Players { get; set; }
+        public List<PlayerMatch> Players { get; set; }
 
     }
 }

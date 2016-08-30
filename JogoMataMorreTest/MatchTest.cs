@@ -1,7 +1,7 @@
 ﻿using System;
 using JogoMataMorre.Business;
 using NUnit.Framework;
-using JogoMataMorre.Entities;
+using JogoMataMorre.Business.Entities;
 
 namespace JogoMataMorre.Test
 {
@@ -68,7 +68,7 @@ namespace JogoMataMorre.Test
         public void LoadMatch()
         {
             var logBO = new LogBO();
-            logBO.LoadMatch(_logLines);
+            logBO.LoadGameLog();
         } 
     }
 }

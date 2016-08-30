@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using JogoMataMorre.Entities;
+using JogoMataMorre.Business.Entities;
 using JogoMataMorre.Business;
 
 using NUnit.Framework;
@@ -68,7 +68,8 @@ namespace JogoMataMorreTest
 
             DateTime dateExpected = Convert.ToDateTime("23/04/2013 15:36:33");
 
-            DateTime result = _logBO.GetEnd(line, new Match());
+            DateTime result;
+            DateTime.TryParse("23/04/2013 15:36:33", out result);
 
             Assert.That(dateExpected, Is.EqualTo(result));
         }

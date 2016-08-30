@@ -5,7 +5,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JogoMataMorre.Entities
+namespace JogoMataMorre.Business.Entities
 {
     public class Kill
     {
@@ -15,7 +15,7 @@ namespace JogoMataMorre.Entities
 
         public string Gun { get; set; }
 
-        public Player Victim { get; set; }
+        public string Victim { get; set; }
 
     }
 }
